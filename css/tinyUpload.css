@@ -1,0 +1,71 @@
+.tinyUpload{
+	width: 100%;
+	min-height: 80px;
+	border: 2px dashed #999;
+	border-radius: 5px;
+	color: #ccc;
+	background-color: #f4f4f4;
+	position: relative;
+	text-align: center;
+	padding: 5px;
+}
+.tinyUpload h3{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -90px;
+	margin-top: -12.5px;
+}
+.tU-list{
+	margin: 0;
+	position: absolute:
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.tU-list li{
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	max-width: 120px;
+	width: 120px;
+	min-height: 128px;
+	font-size: .8em;
+	border: 1px solid #c4c4c4;
+	box-shadow: 1px 1px 1px #999;
+	text-align: center;
+	vertical-align: top;
+	background-color: #fff;
+	color: #333;
+	margin: 1.2%;
+	padding: 3px 0;
+}
+.tU-list p{
+	margin: 3px;
+}
+.tU-list img{
+	max-width: 64px;
+	height: 64px;
+	min-height: 64px;
+}
+.tU-list .icon{
+	position: absolute;
+	top: -9px;
+	right: -9px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.tU-list .icon.ok{
+	background-image: url('../img/ok.png');
+}
+.tU-list .icon.ok:hover{
+	background-image: url('../img/ko.png');
+}
+.tU-list .icon.ko{
+	background-image: url('../img/ko.png');
+}
+progress{
+	width: 95%;
+}
+
