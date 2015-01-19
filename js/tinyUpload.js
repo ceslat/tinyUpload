@@ -7,6 +7,8 @@
  * Web: https://github.com/ceslat/tinyUpload
  */
 
+var uploadTo = 'upload.php';
+
 function humanFileSize(size) {
     var i = Math.floor( Math.log(size) / Math.log(1024) );
     return ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['Bytes', 'kB', 'MB', 'GB', 'TB'][i];
@@ -167,7 +169,7 @@ function processData(f){
 		}
 	})(progress), false);
 
-	request.open('POST', 'upload.php');
+	request.open('POST', uploadTo);
 	request.send(data);
 }
 
