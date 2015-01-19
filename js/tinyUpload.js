@@ -1,14 +1,11 @@
-/*
- * tinyUpload v0.7
- *
- * Created by Ceslat
- *
+/***
  * Copyright (c) 2014
- * Dual licensed under the GPL v.3 licenses.
+ * Licensed under the MIT License.
  *
- * http://github.com/ceslat/tinyUpload
+ * Author: César Latorre
+ * Version: 0.8
+ * Web: https://github.com/ceslat/tinyUpload
  */
-
 
 function humanFileSize(size) {
     var i = Math.floor( Math.log(size) / Math.log(1024) );
@@ -22,6 +19,7 @@ function processData(f){
 	var name = document.createElement('p');
 	var bytes = document.createElement('p');
 	var progress = document.createElement('progress');
+	var ext = f.name.split('.').pop();
 
 	a.addEventListener('click', (function(li){
 		return function(){
@@ -29,7 +27,88 @@ function processData(f){
 		};
 	})(li), false);
 
-	img.src = 'img/file.png';
+	switch(ext) {
+		//image
+		case 'jpg':
+			img.src = 'img/file_img.png';
+			break;
+		case 'jpeg':
+			img.src = 'img/file_img.png';
+			break;
+		case 'png':
+			img.src = 'img/file_img.png';
+			break;
+		case 'gif':
+			img.src = 'img/file_img.png';
+			break;
+		case 'bmp':
+			img.src = 'img/file_img.png';
+			break;
+		//doc
+		case 'doc':
+			img.src = 'img/file_doc.png';
+			break;
+		case 'docx':
+			img.src = 'img/file_doc.png';
+			break;
+		//music
+		case 'mp3':
+			img.src = 'img/file_mp3.png';
+			break;
+		//pdf
+		case 'pdf':
+			img.src = 'img/file_pdf.png';
+			break;
+		//ppt
+		case 'ppt':
+			img.src = 'img/file_ppt.png';
+			break;
+		case 'pptx':
+			img.src = 'img/file_ppt.png';
+			break;
+		//video
+		case 'avi':
+			img.src = 'img/file_video.png';
+			break;
+		case 'mp4':
+			img.src = 'img/file_video.png';
+			break;
+		case 'mpg':
+			img.src = 'img/file_video.png';
+			break;
+		case 'mpeg':
+			img.src = 'img/file_video.png';
+			break;
+		case 'ogv':
+			img.src = 'img/file_video.png';
+			break;
+		//xls
+		case 'xls':
+			img.src = 'img/file_xls.png';
+			break;
+		case 'xlsx':
+			img.src = 'img/file_xls.png';
+			break;
+		//compress
+		case 'zip':
+			img.src = 'img/file_zip.png';
+			break;
+		case 'rar':
+			img.src = 'img/file_zip.png';
+			break;
+		case '7z':
+			img.src = 'img/file_zip.png';
+			break;
+		case 'tar':
+			img.src = 'img/file_zip.png';
+			break;
+		case 'gz':
+			img.src = 'img/file_zip.png';
+			break;
+		//other
+		default:
+			img.src = 'img/file_txt.png';
+	}
 
 	if(f.name.length > 14){
 		name.innerHTML = f.name.toLowerCase().substr(0,14) + '...';
@@ -71,9 +150,9 @@ function processData(f){
 				file.name = 'files[]';
 				file.value = resp.files;
 				li.appendChild(file);
-				a.className = "icon ok";
+				a.className = "result ok";
 			}else{
-				a.className = "icon ko";
+				a.className = "result ko";
 				a.title = resp.message;
 			}
 		}
