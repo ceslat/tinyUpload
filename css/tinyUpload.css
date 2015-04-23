@@ -1,6 +1,6 @@
 .tinyUpload{
     position: relative;
-	min-width: 75%;
+	width: 100%;
 	min-height: 96px;
 	border: 2px dashed #999;
 	border-radius: 5px;
@@ -9,7 +9,7 @@
 	padding: 5px;
 	display: inline-block;
 }
-.tinyUpload h3{
+.tinyUpload h4{
 	position: absolute;
     width: 100%;
     margin: 0 auto;
@@ -26,13 +26,12 @@
     display: inline;
     opacity: 0;
 }
-.tU-list{
+.tinyUpload-list{
     margin: 0;
     padding: 0;
-    position: relative;
     width: 100%;
 }
-.tU-list li{
+.tinyUpload-list li{
 	position: relative;
 	list-style: none;
 	display: inline-block;
@@ -49,15 +48,15 @@
 	margin: 1.2%;
 	padding: 3px 0 !important;
 }
-.tU-list p{
+.tinyUpload-list p{
 	margin: 3px;
 }
-.tU-list img{
+.tinyUpload-list img{
 	max-width: 64px;
 	height: 64px;
 	min-height: 64px;
 }
-.tU-list .result{
+.tinyUpload-list .result{
 	position: absolute;
 	top: -9px;
 	right: -9px;
@@ -65,16 +64,13 @@
 	height: 32px;
 	cursor: pointer;
 }
-.tU-list .result.ok{
+.tinyUpload-list .result.ok{
 	background-image: url('../img/ok.png');
 }
-.tU-list .result.ok:hover{
+.tinyUpload-list .result.ok:hover,
+.tinyUpload-list .result.ko{
 	background-image: url('../img/ko.png');
 }
-.tU-list .result.ko{
-	background-image: url('../img/ko.png');
-}
-progress{
+.tinyUpload-list progress{
 	width: 95%;
 }
-
