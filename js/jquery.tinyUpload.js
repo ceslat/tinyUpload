@@ -27,88 +27,88 @@
         switch(ext) {
             //image
             case 'jpg':
-                img.src = '/static/img/file_img.png';
+                img.src = 'img/file_img.png';
                 break;
             case 'jpeg':
-                img.src = '/static/img/file_img.png';
+                img.src = 'img/file_img.png';
                 break;
             case 'png':
-                img.src = '/static/img/file_img.png';
+                img.src = 'img/file_img.png';
                 break;
             case 'gif':
-                img.src = '/static/img/file_img.png';
+                img.src = 'img/file_img.png';
                 break;
             case 'bmp':
-                img.src = '/static/img/file_img.png';
+                img.src = 'img/file_img.png';
                 break;
             //doc
             case 'doc':
-                img.src = '/static/img/file_doc.png';
+                img.src = 'img/file_doc.png';
                 break;
             case 'docx':
-                img.src = '/static/img/file_doc.png';
+                img.src = 'img/file_doc.png';
                 break;
             //music
             case 'mp3':
-                img.src = '/static/img/file_mp3.png';
+                img.src = 'img/file_mp3.png';
                 break;
             //pdf
             case 'pdf':
-                img.src = '/static/img/file_pdf.png';
+                img.src = 'img/file_pdf.png';
                 break;
             //ppt
             case 'ppt':
-                img.src = '/static/img/file_ppt.png';
+                img.src = 'img/file_ppt.png';
                 break;
             case 'pptx':
-                img.src = '/static/img/file_ppt.png';
+                img.src = 'img/file_ppt.png';
                 break;
             //video
             case 'avi':
-                img.src = '/static/img/file_video.png';
+                img.src = 'img/file_video.png';
                 break;
             case 'mp4':
-                img.src = '/static/img/file_video.png';
+                img.src = 'img/file_video.png';
                 break;
             case 'mpg':
-                img.src = '/static/img/file_video.png';
+                img.src = 'img/file_video.png';
                 break;
             case 'mpeg':
-                img.src = '/static/img/file_video.png';
+                img.src = 'img/file_video.png';
                 break;
             case 'ogv':
-                img.src = '/static/img/file_video.png';
+                img.src = 'img/file_video.png';
                 break;
             //xls
             case 'xls':
-                img.src = '/static/img/file_xls.png';
+                img.src = 'img/file_xls.png';
                 break;
             case 'xlsx':
-                img.src = '/static/img/file_xls.png';
+                img.src = 'img/file_xls.png';
                 break;
             //compress
             case 'zip':
-                img.src = '/static/img/file_zip.png';
+                img.src = 'img/file_zip.png';
                 break;
             case 'rar':
-                img.src = '/static/img/file_zip.png';
+                img.src = 'img/file_zip.png';
                 break;
             case '7z':
-                img.src = '/static/img/file_zip.png';
+                img.src = 'img/file_zip.png';
                 break;
             case 'tar':
-                img.src = '/static/img/file_zip.png';
+                img.src = 'img/file_zip.png';
                 break;
             case 'gz':
-                img.src = '/static/img/file_zip.png';
+                img.src = 'img/file_zip.png';
                 break;
             //other
             default:
-                img.src = '/static/img/file_txt.png';
+                img.src = 'img/file_txt.png';
         }
 
-        if(f.name.length > 14){
-            name.innerHTML = f.name.toLowerCase().substr(0,14) + '...';
+        if(f.name.length > 12){
+            name.innerHTML = f.name.toLowerCase().substr(0,12) + '...';
         }
         else{
             name.innerHTML = f.name.toLowerCase();
